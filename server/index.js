@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser());
 app.use(express.static(__dirname + '/../client/dist'));
 
-const port = 3001;
+const port = 3002;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
