@@ -1,3 +1,4 @@
 node_modules
 necessary-tech.txt
 npm-debug.log
+client/dist/bundle.js
