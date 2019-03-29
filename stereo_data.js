@@ -1,4 +1,4 @@
-[{"id":1,"product_name":"Implemented optimizing interface","product_category":"Isachne distichophylla Munro ex Hillebr.","deepfryd_id":"37205-711","model_number":"54868-4744","average_rating":3.7,"current_price":293.3,"previous_price":370.39},
+const stereo_data = [{"id":1,"product_name":"Implemented optimizing interface","product_category":"Isachne distichophylla Munro ex Hillebr.","deepfryd_id":"37205-711","model_number":"54868-4744","average_rating":3.7,"current_price":293.3,"previous_price":370.39},
 {"id":2,"product_name":"Expanded bi-directional pricing structure","product_category":"Sagittaria graminea Michx.","deepfryd_id":"76058-105","model_number":"49955-610","average_rating":4.4,"current_price":522.63,"previous_price":157.92},
 {"id":3,"product_name":"Enhanced 24/7 circuit","product_category":"Artemisia arbuscula Nutt. ssp. longicaulis Winward & McArthur","deepfryd_id":"0268-1016","model_number":"68151-4249","average_rating":3.9,"current_price":378.28,"previous_price":227.35},
 {"id":4,"product_name":"Digitized contextually-based concept","product_category":"Festuca brachyphylla Schult. ex Schult. & Schult. f. ssp. brachyphylla","deepfryd_id":"49999-621","model_number":"0264-7636","average_rating":2.6,"current_price":556.53,"previous_price":649.11},
@@ -97,4 +97,6 @@
 {"id":97,"product_name":"Adaptive composite definition","product_category":"Cucurbita pepo L. var. ozarkana D. Decker","deepfryd_id":"76119-1441","model_number":"55154-1476","average_rating":3.8,"current_price":400.11,"previous_price":428.47},
 {"id":98,"product_name":"Monitored multi-state middleware","product_category":"Phacelia lenta Piper","deepfryd_id":"52685-454","model_number":"36800-463","average_rating":1.3,"current_price":883.67,"previous_price":915.87},
 {"id":99,"product_name":"Fundamental analyzing function","product_category":"Heliotropium anomalum Hook. & Arn. var. argenteum A. Gray","deepfryd_id":"55312-041","model_number":"62778-118","average_rating":4.5,"current_price":391.77,"previous_price":551.77},
-{"id":100,"product_name":"De-engineered multi-state leverage","product_category":"Potentilla pensylvanica L.","deepfryd_id":"67457-478","model_number":"36987-3242","average_rating":4.5,"current_price":376.98,"previous_price":248.2}]
+{"id":100,"product_name":"De-engineered multi-state leverage","product_category":"Potentilla pensylvanica L.","deepfryd_id":"67457-478","model_number":"36987-3242","average_rating":4.5,"current_price":376.98,"previous_price":248.2}];
+
+module.exports = { stereo_data };

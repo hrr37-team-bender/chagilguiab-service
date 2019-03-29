@@ -5,12 +5,13 @@ CREATE DATABASE deepfryd;
 USE deepfryd;
 
 CREATE TABLE stereos (
-  id int NOT NULL AUTO-INCREMENT,
+  id int NOT NULL AUTO_INCREMENT,
   product_name varchar(50),
-  product_category varchar(50),
-  deepfryd_id Number NOT NULL,
-  model_number Number NOT NULL,
-  average_rating Number NOT NULL,
-  current_price Number NOT NULL,
-  previous_price Number NOT NULL
+  product_category varchar(100),
+  deepfryd_id int NOT NULL,
+  model_number int NOT NULL,
+  average_rating int NOT NULL,
+  current_price int NOT NULL,
+  previous_price int NOT NULL,
+  PRIMARY KEY (ID)
 );
