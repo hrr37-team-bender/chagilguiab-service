@@ -6,10 +6,11 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      stereos: []
+      stereos: [],
+      deepfryd_id: "37205-711",
     }
 
-    this.setState = this.setState.bind(this);
+    this.setState = this.setState.bind(thqis);
     this.updateQuantity = this.updateQuantity.bind(this);
   }
 
@@ -32,7 +33,6 @@ class App extends React.Component {
       <div>
         <h3>Bose SoundTouch 20 Series III Wireless Music System - Black</h3>
         <p>Frys#: 8574639 Model: 738063-1100</p>
-        <img src="http://images.nymag.com/news/intelligencer/intelposts120326_starstruck_560.jpg" width = "280" height = "115" />
       </div>
     )
   }

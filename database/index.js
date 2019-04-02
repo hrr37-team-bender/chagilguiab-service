@@ -3,16 +3,17 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-const getAllStereos = function (callback) {
-  let queryString  = `select * from stereos`;
+const getStereo = function (id, callback) {
+  let queryString  = `select * from stereos where deepfryd_id = ${id}`;
   connection.query(queryString, (err, results) => {
     if (err) {
       console.log(err);
       return;
     }
-    callback(results);
+    let result = results[0];
+    callback(result);
   });
 };
 
 
-module.exports = { connection, getAllStereos };
+module.exports = { connection, getStereo };

@@ -8,7 +8,7 @@ CREATE TABLE stereos (
   id int NOT NULL AUTO_INCREMENT,
   product_name varchar(50),
   product_category varchar(100),
-  deepfryd_id int NOT NULL,
+  deepfryd_id varchar(100),
   model_number int NOT NULL,
   average_rating int NOT NULL,
   current_price int NOT NULL,
