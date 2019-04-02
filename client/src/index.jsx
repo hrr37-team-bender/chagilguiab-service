@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
+import Cart from './components/Cart.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -35,6 +35,7 @@ class App extends React.Component {
         <h3>{this.state.stereo_data.product_name}</h3>
         <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id}</p>
+        <Cart />
       </div>
     )
   }
