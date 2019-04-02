@@ -5,7 +5,7 @@ class Cart extends React.Component {
     super(props)
 
     this.state = {
-      data: null
+      quantity: null
     }
 
     this.setState = this.setState.bind(this);

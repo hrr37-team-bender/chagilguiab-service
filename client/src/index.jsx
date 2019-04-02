@@ -9,7 +9,6 @@ class App extends React.Component {
     this.state = {
       stereo_data: {},
       deepfryd_id: "37205-711",
-      quantity: null
     }
 
     this.setState = this.setState.bind(this);
