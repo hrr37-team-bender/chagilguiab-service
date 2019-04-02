@@ -6,8 +6,9 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      stereo_data: [],
-      deepfryd_id: "76058-105",
+      stereo_data: {},
+      deepfryd_id: "37205-711",
+      quantity: null
     }
 
     this.setState = this.setState.bind(this);
@@ -15,16 +16,11 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    console.log(typeof this.state.deepfryd_id);
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
       this.setState({stereo_data: results}, () => {
         console.log(this.state);
       });
     });
-  }
-
-  componentDidUpdate() {
-    console.log(this.state);
   }
 
   updateQuantity (quantity) {
@@ -36,8 +32,9 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <h3>Bose SoundTouch 20 Series III Wireless Music System - Black</h3>
-        <p>Frys#: 8574639 Model: 738063-1100</p>
+        <h3>{this.state.stereo_data.product_name}</h3>
+        <div>STARS WILL GO HERE</div>
+        <p>Frys#: {this.state.deepfryd_id}</p>
       </div>
     )
   }
