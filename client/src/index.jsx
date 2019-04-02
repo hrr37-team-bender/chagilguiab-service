@@ -6,9 +6,10 @@ import Cart from './components/Cart.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       stereo_data: {},
-      deepfryd_id: "37205-711",
+      deepfryd_id: "0378-0271",
     }
 
     this.setState = this.setState.bind(this);
@@ -17,9 +18,7 @@ class App extends React.Component {
 
   componentDidMount () {
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
-      this.setState({stereo_data: results}, () => {
-        console.log(this.state);
-      });
+      this.setState({stereo_data: results});
     });
   }
 
@@ -33,7 +32,10 @@ class App extends React.Component {
         <h3>{this.state.stereo_data.product_name}</h3>
         <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id}</p>
-        <Cart />
+        <Cart
+          currentPrice={this.state.stereo_data.current_price}
+          previousPrice={this.state.stereo_data.previous_price}
+        />
       </div>
     )
   }
