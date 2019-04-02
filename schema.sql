@@ -6,7 +6,7 @@ USE deepfryd;
 
 CREATE TABLE stereos (
   id int NOT NULL AUTO_INCREMENT,
-  product_name varchar(50),
+  product_name varchar(100),
   product_category varchar(100),
   deepfryd_id varchar(100),
   model_number int NOT NULL,

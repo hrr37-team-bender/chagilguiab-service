@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 const port = 3002;
 
 app.get('/api/stereos/:id', (req, res) => {
-  let deepfryd_id = JSON.stringify(req.params.id);
+  let deepfryd_id = req.params.id;
   getStereo(deepfryd_id, (results) => {
     res.send(results);
   });

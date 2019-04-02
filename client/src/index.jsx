@@ -6,20 +6,25 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      stereos: [],
-      deepfryd_id: "37205-711",
+      stereo_data: [],
+      deepfryd_id: "76058-105",
     }
 
-    this.setState = this.setState.bind(thqis);
+    this.setState = this.setState.bind(this);
     this.updateQuantity = this.updateQuantity.bind(this);
   }
 
   componentDidMount () {
-    $.get('/api/stereos', (results) => {
-      this.setState({stereos: results}, () => {
+    console.log(typeof this.state.deepfryd_id);
+    $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
+      this.setState({stereo_data: results}, () => {
         console.log(this.state);
       });
     });
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
   }
 
   updateQuantity (quantity) {
