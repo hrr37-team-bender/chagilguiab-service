@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Cart from './components/Cart.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -24,9 +25,7 @@ class App extends React.Component {
   }
 
   updateQuantity (quantity) {
-    $.post('/api/stereos', {quantity: quantity}, (results) => {
-      console.log(results);
-    });
+    this.setState({quantity: quantity});
   }
 
   render () {
