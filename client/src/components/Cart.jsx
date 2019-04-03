@@ -14,7 +14,7 @@ class Cart extends React.Component {
   }
 
   render () {
-    console.log(this.props);
+    console.log(this.state);
     return (
       <div>
         <h4>Price: ${this.props.currentPrice}</h4>
