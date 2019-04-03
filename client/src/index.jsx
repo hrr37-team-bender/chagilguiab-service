@@ -34,7 +34,7 @@ class App extends React.Component {
       <div>
         <h3>{this.state.stereo_data.product_name}</h3>
         <div>STARS WILL GO HERE</div>
-        <p>Frys#: {this.state.deepfryd_id}</p>
+        <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
         <Cart
           currentPrice={this.state.currentPrice}
           previousPrice={this.state.previousPrice}
