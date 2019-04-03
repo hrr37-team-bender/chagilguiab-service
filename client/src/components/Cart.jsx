@@ -1,4 +1,5 @@
 import React from 'react';
+import Quantity from './Quantity.jsx';
 
 class Cart extends React.Component {
   constructor (props) {
@@ -19,7 +20,7 @@ class Cart extends React.Component {
       <div>
         <h4>Price: ${this.props.currentPrice}</h4>
         <h6>Was: ${this.props.previousPrice}</h6>
-        This will be the cart.
+        <Quantity />
       </div>
     )
   }
