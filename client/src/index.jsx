@@ -8,8 +8,11 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      quantity: 0,
       stereo_data: {},
-      deepfryd_id: "37205-711",
+      currentPrice: null,
+      previousPrice: null,
+      deepfryd_id: "52810-201",
     }
 
     this.setState = this.setState.bind(this);
@@ -18,7 +21,7 @@ class App extends React.Component {
 
   componentDidMount () {
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
-      this.setState({stereo_data: results});
+      this.setState({stereo_data: results, currentPrice: results.current_price, previousPrice: results.previous_price});
     });
   }
 
@@ -33,8 +36,8 @@ class App extends React.Component {
         <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id}</p>
         <Cart
-          currentPrice={this.state.stereo_data.current_price}
-          previousPrice={this.state.stereo_data.previous_price}
+          currentPrice={this.state.currentPrice}
+          previousPrice={this.state.previousPrice}
         />
       </div>
     )
