@@ -1,38 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import Cart from './components/Cart.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
-      stereos: [],
-      deepfryd_id: "37205-711",
+      quantity: 0,
+      stereo_data: {},
+      currentPrice: null,
+      previousPrice: null,
+      deepfryd_id: "52810-201",
     }
 
-    this.setState = this.setState.bind(thqis);
+    this.setState = this.setState.bind(this);
     this.updateQuantity = this.updateQuantity.bind(this);
   }
 
   componentDidMount () {
-    $.get('/api/stereos', (results) => {
-      this.setState({stereos: results}, () => {
-        console.log(this.state);
-      });
+    $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
+      this.setState({stereo_data: results, currentPrice: results.current_price, previousPrice: results.previous_price});
     });
   }
 
   updateQuantity (quantity) {
-    $.post('/api/stereos', {quantity: quantity}, (results) => {
-      console.log(results);
-    });
+    this.setState({quantity: quantity});
   }
 
   render () {
     return (
       <div>
-        <h3>Bose SoundTouch 20 Series III Wireless Music System - Black</h3>
-        <p>Frys#: 8574639 Model: 738063-1100</p>
+        <h3>{this.state.stereo_data.product_name}</h3>
+        <div>STARS WILL GO HERE</div>
+        <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
+        <Cart
+          currentPrice={this.state.currentPrice}
+          previousPrice={this.state.previousPrice}
+        />
       </div>
     )
   }
