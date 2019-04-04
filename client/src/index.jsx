@@ -17,7 +17,8 @@ class App extends React.Component {
     }
 
     this.setState = this.setState.bind(this);
-    this.updateQuantity = this.updateQuantity.bind(this);
+    this.plus = this.plus.bind(this);
+    this.minus = this.minus.bind(this);
   }
 
   componentDidMount () {
@@ -27,8 +28,17 @@ class App extends React.Component {
   }
 
   plus () {
-    let newValue = this.state.quantity++;
+    let newValue = this.state.quantity;
+    newValue++;
     this.setState({quantity: newValue});
+  }
+
+  minus () {
+    if (this.state.quantity > 0) {
+      let newValue = this.state.quantity;
+      newValue--;
+      this.setState({quantity: newValue});
+    }
   }
 
   render () {
