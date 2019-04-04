@@ -11,5 +11,11 @@ describe ('Quantity', () => {
   it('should render default string', () => {
     const string = 'This will be the Quantity console.';
     expect(component.text()).toEqual(string);
-  })
+  });
+
+  it('should handle click', () => {
+    expect(component.state().val).toEqual(0);
+    component.simulate('click');
+    expect(component.state().val).toEqual(1);
+  });
 });
