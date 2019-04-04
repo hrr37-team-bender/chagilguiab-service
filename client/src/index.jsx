@@ -13,7 +13,7 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       previousPrice: null,
-      deepfryd_id: "52810-201",
+      deepfryd_id: "37205-711",
     }
 
     this.setState = this.setState.bind(this);
@@ -47,6 +47,8 @@ class App extends React.Component {
         <h3>{this.state.stereo_data.product_name}</h3>
         <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
+        <h4>Price: ${this.state.currentPrice}</h4>
+        <h6>Was: ${this.state.previousPrice}</h6>
         <Cart
           currentPrice={this.state.currentPrice}
           previousPrice={this.state.previousPrice}
