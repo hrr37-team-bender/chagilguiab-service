@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Cart from './components/Cart.jsx';
+import Quantity from './components/Quantity.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,8 +26,9 @@ class App extends React.Component {
     });
   }
 
-  updateQuantity (quantity) {
-    this.setState({quantity: quantity});
+  plus () {
+    let newValue = this.state.quantity++;
+    this.setState({quantity: newValue});
   }
 
   render () {
@@ -39,6 +41,11 @@ class App extends React.Component {
           currentPrice={this.state.currentPrice}
           previousPrice={this.state.previousPrice}
         />
+        <Quantity
+        plus={this.plus}
+        minus={this.minus}
+        quantity={this.state.quantity}
+         />
       </div>
     )
   }
