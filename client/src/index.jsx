@@ -12,7 +12,7 @@ export default class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       previousPrice: null,
-      deepfryd_id: "52810-201",
+      deepfryd_id: "37205-711",
     }
 
     this.setState = this.setState.bind(this);
