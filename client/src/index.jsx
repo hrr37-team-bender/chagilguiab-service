@@ -42,9 +42,18 @@ class App extends React.Component {
   }
 
   render () {
+    const deepfryd_id = this.state.deepfryd_id;
+    let productName;
+
+    if (deepfryd_id === '37205-711') {
+      productName = <h3>Bose  &reg; SoundTouch&reg; Series III Wireless Music System - Black </h3>;
+    } else {
+      productName = <h3>{this.state.stereo_data.product_name}</h3>;
+    }
+
     return (
       <div>
-        <h3>{this.state.stereo_data.product_name}</h3>
+        {productName}
         <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
         <h4>Price: ${this.state.currentPrice}</h4>
