@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Cart from './components/Cart.jsx';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props)
 
@@ -12,7 +12,7 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       previousPrice: null,
-      deepfryd_id: "52810-201",
+      deepfryd_id: "37205-711",
     }
 
     this.setState = this.setState.bind(this);
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app') || document.createElement('div'));
