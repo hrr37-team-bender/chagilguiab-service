@@ -16,23 +16,31 @@ h3 {
   margin: auto;
 }
 
+.quantity {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.quant-div {
+  background-color: #fff;
+  cursor: default;
+  outline: lightgray;
+  box-shadow: none;
+  text-align: center;
+}
+
 .btn {
   font-size: 12px;
   white-space: normal;
   height: 34px;
   width: 75%;
   font-style: normal;
-  /* float: right; */
   color: #fff;
   background-color: #5cb85c;;
   border-color: #4cae4c;
-  /* display: inline-block; */
   padding: 6px 12px;
-  /* margin-bottom: 0; */
   font-weight: 400;
-  /* line-height: 1.42857143; */
-  /* text-align: center; */
-  /* touch-action: manipulation; */
   cursor: pointer;
   border: 1px solid transparent;
 }
@@ -46,7 +54,8 @@ h3 {
 
 .col2 {
   width:15%;
-  margin-left: 30px
+  margin-left: 30px;
+  position: relative;
 }
 
 .col3 {

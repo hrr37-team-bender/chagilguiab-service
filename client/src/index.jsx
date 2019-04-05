@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Cart from './components/Cart.jsx';
 import Quantity from './components/Quantity.jsx';
+import Rating from './components/Rating.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class App extends React.Component {
       quantity: 0,
       stereo_data: {},
       currentPrice: null,
-      previousPrice: null,
       deepfryd_id: "37205-711",
     }
 
@@ -23,7 +23,8 @@ class App extends React.Component {
 
   componentDidMount () {
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
-      this.setState({stereo_data: results, currentPrice: results.current_price.toFixed(2), previousPrice: results.previous_price});
+      this.setState({stereo_data: results, currentPrice: results.current_price.toFixed(2)
+      });
     });
   }
 
@@ -59,7 +60,9 @@ class App extends React.Component {
           <span className="prod-num">{this.state.deepfryd_id} </span>
           <span className="red">Model: </span>
           <span className="prod-num">{this.state.stereo_data.model_number}</span>
-          <div>STARS WILL GO HERE</div>
+          <Rating
+            rating={this.state.stereo_data.average_rating}
+          />
         </div>
         <div className="col2">
           <Quantity
