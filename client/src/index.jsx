@@ -53,15 +53,17 @@ class App extends React.Component {
 
     return (
       <div>
-        {productName}
-        <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
+        <h3>{productName}</h3>
+        <div className="prod-info">
+          <span className="red">Frys#:</span>
+          <span className="prod-num">{this.state.deepfryd_id}</span>
+          <span className="red">Model:</span>
+          <span className="prod-num">{this.state.stereo_data.model_number}</span>
+        </div>
         <div>STARS WILL GO HERE</div>
-        <h4>Price: ${this.state.currentPrice}</h4>
+        <div className="price">${this.state.currentPrice}</div>
         <h6>Was: ${this.state.previousPrice}</h6>
-        <Cart
-          currentPrice={this.state.currentPrice}
-          previousPrice={this.state.previousPrice}
-        />
+        <Cart />
         <Quantity
         plus={this.plus}
         minus={this.minus}
