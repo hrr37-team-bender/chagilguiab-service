@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Rating = (props) => (
-  <div className="ratings">
+  <div className="rating">
     STARS {props.rating}
   </div>
 );
