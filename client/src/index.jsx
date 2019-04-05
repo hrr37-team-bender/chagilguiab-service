@@ -56,9 +56,9 @@ class App extends React.Component {
       <div className="app">
         <div className="prod-info col1">
           {productName}
-          <span className="red">Frys#: </span>
+          <span className="red-txt">Frys#: </span>
           <span className="prod-num">{this.state.deepfryd_id} </span>
-          <span className="red">Model: </span>
+          <span className="red-txt">Model: </span>
           <span className="prod-num">{this.state.stereo_data.model_number}</span>
           <Rating
             rating={this.state.stereo_data.average_rating}

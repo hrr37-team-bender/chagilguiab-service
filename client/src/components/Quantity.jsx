@@ -2,9 +2,9 @@ import React from 'react';
 
 const Quantity = (props) => (
   <div className="quantity">
-    <button onClick={props.minus}>-</button>
-    <span className="quant-div">{` ${props.quantity} `}</span>
-    <button onClick={props.plus}>+</button>
+    <button className="quant-btn" onClick={props.minus}>-</button>
+    <div className="quant-div">{` ${props.quantity} `}</div>
+    <button className="quant-btn" onClick={props.plus}>+</button>
   </div>
 );
 

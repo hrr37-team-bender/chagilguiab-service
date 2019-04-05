@@ -20,14 +20,24 @@ h3 {
   position: absolute;
   bottom: 0;
   right: 0;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .quant-div {
   background-color: #fff;
   cursor: default;
-  outline: lightgray;
+  outline: black;
   box-shadow: none;
   text-align: center;
+  width: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+.quant-btn {
+  display: block;
+  width: 100%;
 }
 
 .btn {
@@ -36,6 +46,8 @@ h3 {
   height: 34px;
   width: 75%;
   font-style: normal;
+  display: inline-block;
+  text-align: center;
   color: #fff;
   background-color: #5cb85c;;
   border-color: #4cae4c;
@@ -63,7 +75,7 @@ h3 {
   text-align: right;
 }
 
-.red {
+.red-txt {
   color: red;
   font-size: 12px;
   font-weight: 600;
