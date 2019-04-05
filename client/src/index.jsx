@@ -13,7 +13,7 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       previousPrice: null,
-      deepfryd_id: "37205-711",
+      deepfryd_id: "76058-105",
     }
 
     this.setState = this.setState.bind(this);
@@ -23,7 +23,9 @@ class App extends React.Component {
 
   componentDidMount () {
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
-      this.setState({stereo_data: results, currentPrice: results.current_price, previousPrice: results.previous_price});
+      console.log(results.current_price)
+      let currentPrice = Number.parseFloat(results.current_price).toFixed(2);
+      this.setState({stereo_data: results, currentPrice: currentPrice, previousPrice: results.previous_price});
     });
   }
 
@@ -52,8 +54,8 @@ class App extends React.Component {
     }
 
     return (
-      <div>
-        <h3>{productName}</h3>
+      <div className="row">
+        {productName}
         <div className="prod-info">
           <span className="red">Frys#:</span>
           <span className="prod-num">{this.state.deepfryd_id}</span>
