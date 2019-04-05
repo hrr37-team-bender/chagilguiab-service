@@ -52,7 +52,7 @@ class App extends React.Component {
     }
 
     return (
-      <div className="row">
+      <div className="app">
         <div className="prod-info col1">
           {productName}
           <span className="red">Frys#: </span>
@@ -70,7 +70,6 @@ class App extends React.Component {
         </div>
         <div className="col3">
           <div className="price">${this.state.currentPrice}</div>
-          <h6>Was: ${this.state.previousPrice}</h6>
           <Cart />
         </div>
       </div>

@@ -10,10 +10,34 @@ h3 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.row {
+.app {
   display: flex;
   flex-flow: row;
+  margin: auto;
 }
+
+.btn {
+  font-size: 12px;
+  white-space: normal;
+  height: 34px;
+  width: 75%;
+  font-style: normal;
+  /* float: right; */
+  color: #fff;
+  background-color: #5cb85c;;
+  border-color: #4cae4c;
+  /* display: inline-block; */
+  padding: 6px 12px;
+  /* margin-bottom: 0; */
+  font-weight: 400;
+  /* line-height: 1.42857143; */
+  /* text-align: center; */
+  /* touch-action: manipulation; */
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn:hover {background-color: #307130}
 
 .col1 {
   width: 30%;
@@ -27,6 +51,7 @@ h3 {
 
 .col3 {
   width: 15%;
+  text-align: right;
 }
 
 .red {
@@ -48,8 +73,14 @@ h3 {
 
 .price {
   font-size: 20px;
+  line-height: 1.42857143;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-bottom: 5px;
   font-weight: 600;
   color: #ed1c24;
   display: inline-block;
+  text-align: right;
+  border-spacing: 0;
+  border-collapse: collapse;
+
 }
