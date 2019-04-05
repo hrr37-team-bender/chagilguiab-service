@@ -13,7 +13,7 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       previousPrice: null,
-      deepfryd_id: "76058-105",
+      deepfryd_id: "37205-711",
     }
 
     this.setState = this.setState.bind(this);
@@ -23,9 +23,7 @@ class App extends React.Component {
 
   componentDidMount () {
     $.get(`/api/stereos/${this.state.deepfryd_id}`, (results) => {
-      console.log(results.current_price)
-      let currentPrice = Number.parseFloat(results.current_price).toFixed(2);
-      this.setState({stereo_data: results, currentPrice: currentPrice, previousPrice: results.previous_price});
+      this.setState({stereo_data: results, currentPrice: results.current_price.toFixed(2), previousPrice: results.previous_price});
     });
   }
 
@@ -55,22 +53,26 @@ class App extends React.Component {
 
     return (
       <div className="row">
-        {productName}
-        <div className="prod-info">
-          <span className="red">Frys#:</span>
-          <span className="prod-num">{this.state.deepfryd_id}</span>
-          <span className="red">Model:</span>
+        <div className="prod-info col1">
+          {productName}
+          <span className="red">Frys#: </span>
+          <span className="prod-num">{this.state.deepfryd_id} </span>
+          <span className="red">Model: </span>
           <span className="prod-num">{this.state.stereo_data.model_number}</span>
+          <div>STARS WILL GO HERE</div>
         </div>
-        <div>STARS WILL GO HERE</div>
-        <div className="price">${this.state.currentPrice}</div>
-        <h6>Was: ${this.state.previousPrice}</h6>
-        <Cart />
-        <Quantity
-        plus={this.plus}
-        minus={this.minus}
-        quantity={this.state.quantity}
-         />
+        <div className="col2">
+          <Quantity
+          plus={this.plus}
+          minus={this.minus}
+          quantity={this.state.quantity}
+          />
+        </div>
+        <div className="col3">
+          <div className="price">${this.state.currentPrice}</div>
+          <h6>Was: ${this.state.previousPrice}</h6>
+          <Cart />
+        </div>
       </div>
     )
   }
