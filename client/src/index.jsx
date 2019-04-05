@@ -54,8 +54,8 @@ class App extends React.Component {
     return (
       <div>
         {productName}
-        <div>STARS WILL GO HERE</div>
         <p>Frys#: {this.state.deepfryd_id} Model: {this.state.stereo_data.model_number}</p>
+        <div>STARS WILL GO HERE</div>
         <h4>Price: ${this.state.currentPrice}</h4>
         <h6>Was: ${this.state.previousPrice}</h6>
         <Cart
