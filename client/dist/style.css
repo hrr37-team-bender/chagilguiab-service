@@ -17,27 +17,69 @@ h3 {
 }
 
 .quantity {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-flow: row nowrap;
+  max-width: 130px;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  white-space: nowrap;
 }
 
 .quant-div {
+  display: inline-block;
+  border: 1px solid lightgray;
   background-color: #fff;
   cursor: default;
-  outline: black;
   box-shadow: none;
   text-align: center;
-  width: 50px;
+  height: 20px;
+  width: 25px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  line-height: 17px;
+  vertical-align: middle;
+
 }
 
 .quant-btn {
-  display: block;
-  width: 100%;
+  background-color: #fff;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 0;
+  font-weight: 300;
+  height: 34px;
+  font-size: 10px;
+  line-height: 17px;
+  color: #ed1c24;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.quant-txt:hover {color: #8B0000 }
+
+.quant-txt {
+  font-size: 18px;
+  opacity: 0.6;
+  font-weight: 1000;
+  font-family: "Font Awesome 5 Free";
+  color: #ed1c24;
+  text-indent: 0px;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
 }
 
 .btn {
