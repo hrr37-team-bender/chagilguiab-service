@@ -16,6 +16,16 @@ h3 {
   margin: auto;
 }
 
+.checked, .unchecked {
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.unchecked {
+  opacity: 0.1;
+}
+
 .quantity {
   max-width: 130px;
   position: absolute;
@@ -154,4 +164,5 @@ h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: #000;
+  cursor: pointer;
 }
