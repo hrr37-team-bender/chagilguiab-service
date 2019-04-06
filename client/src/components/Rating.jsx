@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Rating = (props) => (
-  <div className="rating">
-    STARS {props.rating}
-  </div>
-);
+class Rating extends React.Component {
+
+  constructor (props) {
+    super(props)
+  }
+
+  render () {
+    return (
+      <div className="rating">
+        STARS {this.props.rating}
+      </div>
+    )
+  }
+
+}
 
 export default Rating;
