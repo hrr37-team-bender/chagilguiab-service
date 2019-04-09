@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const { getStereo } = require ('../database/index.js');
 
 app.use(bodyParser());
-app.use(express.static(__dirname + '/../client/dist'));
+// app.use(express.static(__dirname + '/../client/dist'));
+const static = `${__dirname}/../client/dist`;
+app.use('/api/stereos/:id', express.static(static));
 
 const port = 3002;
 
