@@ -3,9 +3,7 @@ import Quantity from './Quantity.jsx';
 
 const Cart = (props) => (
 <div>
-  <h4>Price: ${props.currentPrice}</h4>
-  <h6>Was: ${props.previousPrice}</h6>
-  <Quantity />
+  <button className="btn"><i className="fas fa-shopping-cart"></i> Add To Cart</button>
 </div>
 );
 

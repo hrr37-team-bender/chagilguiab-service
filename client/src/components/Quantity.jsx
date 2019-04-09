@@ -1,27 +1,11 @@
 import React from 'react';
 
-class  Quantity extends React.Component{
-  constructor(props) {
-    super(props)
-
-    this.state ={
-      val: 0
-    }
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState({clicked: 1});
-  }
-
-  render () {
-
-    return (
-      <div onClick={this.handleClick}>
-        This will be the Quantity console.
-      </div>
-    );
-  }
-}
+const Quantity = (props) => (
+  <div className="quantity">
+    <button className="quant-btn" onClick={props.minus}><span className="quant-txt">-</span></button>
+    <div className="quant-div">{` ${props.quantity} `}</div>
+    <button className="quant-btn" onClick={props.plus}><span className="quant-txt">+</span></button>
+  </div>
+);
 
 export default Quantity;

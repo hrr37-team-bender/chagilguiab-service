@@ -10,8 +10,8 @@ CREATE TABLE stereos (
   product_category varchar(100),
   deepfryd_id varchar(100),
   model_number int NOT NULL,
-  average_rating int NOT NULL,
-  current_price int NOT NULL,
+  average_rating DECIMAL (2, 1),
+  current_price DECIMAL (20, 2),
   previous_price int NOT NULL,
   PRIMARY KEY (ID)
 );
