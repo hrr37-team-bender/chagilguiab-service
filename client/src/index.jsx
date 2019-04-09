@@ -5,7 +5,7 @@ import Cart from './components/Cart.jsx';
 import Quantity from './components/Quantity.jsx';
 import Rating from './components/Rating.jsx';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props)
 
@@ -80,4 +80,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app') || document.createElement('div'));
