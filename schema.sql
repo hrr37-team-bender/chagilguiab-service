@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS deepfryd;
+DROP DATABASE IF EXISTS deepfryd_descriptions;
 
-CREATE DATABASE deepfryd;
+CREATE DATABASE deepfryd_descriptions;
 
-USE deepfryd;
+USE deepfryd_descriptions;
 
 CREATE TABLE stereos (
   id int NOT NULL AUTO_INCREMENT,
