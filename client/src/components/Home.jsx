@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Cart from './Cart.jsx';
 import Quantity from './Quantity.jsx';
 import Rating from './Rating.jsx';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
