@@ -84,7 +84,13 @@ class App extends React.Component {
         </div>
         <div className="col3">
           <div className="price">${this.state.currentPrice}</div>
-          <Cart />
+          <Cart onClick={this.toggleModal} />
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onRequestClose={this.closeModal}
+          >
+          <h1>Hello there!</h1>
+          </Modal>
         </div>
       </div>
     )
