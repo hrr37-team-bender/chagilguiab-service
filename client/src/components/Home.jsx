@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import Modal from 'react-modal';
 import Cart from './Cart.jsx';
 import Quantity from './Quantity.jsx';
 import Rating from './Rating.jsx';
@@ -13,11 +14,13 @@ class App extends React.Component {
       stereo_data: {},
       currentPrice: null,
       deepfryd_id: "81420",
+      modalIsOpen: false
     }
 
     this.setState = this.setState.bind(this);
     this.plus = this.plus.bind(this);
     this.minus = this.minus.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   componentDidMount () {
@@ -30,6 +33,10 @@ class App extends React.Component {
       });
     });
 
+  }
+
+  toggleModal() {
+    this.setState({modalIsOpen: !this.state.modalIsOpen});
   }
 
   plus () {
