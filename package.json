@@ -18,6 +18,7 @@
     "nodemon": "^1.18.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.8.1",
     "request": "^2.88.0"
   },
   "devDependencies": {
@@ -35,7 +36,7 @@
     "webpack-cli": "^3.3.0"
   },
   "scripts": {
-    "start":"webpack -d --watch & nodemon server/index.js -w database -w server",
+    "start": "webpack -d --watch & nodemon server/index.js -w database -w server",
     "react-dev": "webpack -d --watch",
     "start-dev": "nodemon server/index.js -w database -w server",
     "seed-db": "mysql -u root < schema.sql && node server/init.js",
