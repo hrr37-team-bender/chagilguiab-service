@@ -97,6 +97,7 @@ class App extends React.Component {
             prodId={this.state.deepfryd_id}
             modelNum={this.state.stereo_data.model_number}
             quant={this.state.quantity}
+            onClick={this.toggleModal}
           />
           </Modal>
         </div>

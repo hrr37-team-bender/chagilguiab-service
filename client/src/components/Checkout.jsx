@@ -10,7 +10,7 @@ const Checkout = (props) => (
       <button className="cart-btn">Remove From Cart</button>
       <button className="cart-btn">Continue Shopping</button>
       <button className="checkout-btn">Checkout</button>
-      <span className="exit-x">X</span>
+      <span onClick={props.onClick}className="exit-x">X</span>
     </div>
     <div className="checkout-info">
       <span className="checkout-info-title">
