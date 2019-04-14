@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import Cart from './Cart.jsx';
 import Quantity from './Quantity.jsx';
 import Rating from './Rating.jsx';
+import Checkout from './Checkout.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -89,7 +90,14 @@ class App extends React.Component {
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
           >
-          <h1>Hello there!</h1>
+          <Checkout
+            quantity={this.state.quantity}
+            price={this.state.currentPrice}
+            prodName={productName}
+            prodId={this.state.deepfryd_id}
+            modelNum={this.state.stereo_data.model_number}
+            quant={this.state.quantity}
+          />
           </Modal>
         </div>
       </div>
