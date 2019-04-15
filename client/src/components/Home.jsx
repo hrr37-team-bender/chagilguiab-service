@@ -6,6 +6,19 @@ import Quantity from './Quantity.jsx';
 import Rating from './Rating.jsx';
 import Checkout from './Checkout.jsx';
 
+const customStyles = {
+  content : {
+    top: '10%',
+    left: '30%',
+    right: '30%',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    margin: 0,
+    padding:0
+  }
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -89,6 +102,7 @@ class App extends React.Component {
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
+            style={customStyles}
           >
           <Checkout
             quantity={this.state.quantity}
